@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Pakistan Pulse: Vibrant Tales of a Nation</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" defer src="main.js"></script>
+		<link
+			rel="icon"
+			href="Resources/Pakistani Flag (Favicon).png"
+			type="image/x-icon"
+		/>
+	</head>
+	<body>
+		<div
+			class="hero"
+			style="
+				height: 100vh;
+				width: 100vw;
+				position: relative;
+				overflow: hidden;
+			"
+		>
+			<header>
+				<nav>
+					<h3><span>Pakistan</span> Pulse</h3>
+					<ul>
+						<li> <a href="history.html">History</a></li>
+						<li> <a>People</a></li>
+						<li><a>Food</a></li>
+					</ul>
+				</nav>
+			</header>
+			<video autoplay loop muted id="hero_section_video">
+				<source
+					src="Resources/hero_section.mp4"
+					type="video/mp4"
+				/>
+			</video>
+			<div class="hero-text">
+				<h1>
+					Explore the
+					<span class="1st">Beauty</span> of
+					<span class="2nd">Pakistan</span>
+				</h1>
+				<h3>A Land of Endless Adventures</h3>
+				<button class="btn">
+
+					<a href="#Explore-Provinces">Discover Now</a>
+				</button>
+			</div>
+		</div>
+		<div class="attractions" id="Explore-Provinces">
+			<div class="container">
+				<div class="title">Popular Attractions</div>
+				<div class="tabs">
+					<button
+						class="tab-link active"
+						onclick="showAttractions('Punjab')"
+					>
+						Punjab
+					</button>
+					<button
+						class="tab-link"
+						onclick="showAttractions('Sindh')"
+					>
+						Sindh
+					</button>
+
+					<button
+						class="tab-link"
+						onclick="showAttractions('Balochistan')"
+					>
+						Balochistan
+					</button>
+					<button
+						class="tab-link"
+						onclick="showAttractions('Khyber Pakhtunkhwa')"
+					>
+						Khyber Pakhtunkhwa
+					</button>
+					<button
+						class="tab-link"
+						onclick="showAttractions('Gilgit')"
+					>
+						Gilgit Baltistan
+					</button>
+				</div>
+				<div id="attraction-cards" class="cards"></div>
+			</div>
+		</div>
+	</body>
+</html>

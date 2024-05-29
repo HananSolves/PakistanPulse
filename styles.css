@@ -1,0 +1,272 @@
+/* Global reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Ensure no horizontal overflow */
+html,
+body {
+	overflow-x: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+/* Hero section styling */
+.hero {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Hero header */
+.hero header {
+	background: rgba(255, 255, 255, 0.2);
+	padding: 3vh;
+	margin: 0 10%;
+	margin-top: 3vh;
+}
+
+header nav {
+	display: flex;
+}
+
+header nav h3 {
+	font-size: 2rem;
+	margin-right: 40%;
+}
+
+header nav h3 span {
+	color: white;
+	background: green;
+}
+
+header nav ul {
+	display: flex;
+}
+
+header nav ul li {
+	font-size: 2rem;
+	list-style: none;
+	margin-left: 2rem;
+	position: relative;
+}
+header nav ul li a{
+	text-decoration: none;
+	color: black;
+}
+header nav ul li a:hover{
+	color: white;
+}
+
+header nav ul li:hover {
+	color: white;
+	cursor: pointer;
+}
+
+header nav ul li::before {
+	content: "";
+	background-color: green;
+	position: absolute;
+	left: 0;
+	bottom: 3px;
+	width: 100%;
+	height: 8px;
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+}
+
+header nav ul li:hover::before {
+	bottom: 0;
+	height: 100%;
+}
+
+#hero_section_video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -100;
+}
+
+/* Hero text styling */
+.hero-text {
+	margin-top: 10vh;
+	color: white;
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-text h1 {
+	font-size: 5rem;
+}
+
+.hero-text h3 {
+	font-size: 2.5rem;
+	margin-top: 1rem;
+}
+
+.hero-text button {
+	margin-top: 2.5rem;
+	--c: green;
+	box-shadow: 0 0 0 0.1em inset var(--c);
+	--_g: linear-gradient(var(--c) 0 0) no-repeat;
+	background:
+		var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+		var(--_g) calc(200% - var(--_p, 0%)) 0%,
+		var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+		var(--_g) calc(200% - var(--_p, 0%)) 100%;
+	background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+	outline-offset: 0.1em;
+	font-size: 2.1rem;
+	cursor: pointer;
+	padding: 0.3em 0.9em;
+	font-weight: bold;
+	border: none;
+	text-decoration: none;
+	transition:
+		background-size 0.4s,
+		background-position 0s 0.4s;
+}
+.hero-text button a {
+	text-decoration: none;
+	color: white;
+}
+
+.hero-text button:hover {
+	--_p: 100%;
+	color: white;
+	transition:
+		background-position 0.4s,
+		background-size 0s;
+}
+
+.hero-text button:active {
+	box-shadow: 0 0 9e9Q inset #0009;
+	background-color: var(--c);
+	color: #fff;
+}
+
+/* Attractions section styling */
+.attractions {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -50px;
+	border-radius: 2rem 2rem 0 0;
+	position: relative;
+	z-index: 2;
+	background-color: white;
+}
+
+.attractions .container {
+	background-color: #e8ebe8;
+	width: 80vw;
+	height: 70vh;
+	border-radius: 1rem;
+        /* margin-top: 0; */ 
+}
+
+.attractions .container .title {
+	font-size: 2rem;
+	margin: 1rem 0 0 1rem;
+}
+.attractions .container .tabs {
+	margin: 1rem 0 0 1rem;
+	display: flex;
+}
+.attractions .container .tab-link {
+	padding: 0.4rem;
+	border-radius: 0.3rem;
+	margin-right: 1rem;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	border: none;
+}
+.attractions .container .tab-link.active {
+	background-color: green;
+	color: white;
+}
+.attractions .container .tab-link:hover {
+	color: green;
+}
+.attractions .container .tab-link.active:hover{
+	color: white;
+}
+
+.attractions .container .tab-link:active {
+	background-color: green;
+	color: white;
+	/* border-color: green; */
+}
+.attractions .container .cards {
+	display: flex;
+	padding-bottom: 3rem;
+	margin: 3rem 0 0  0;
+	overflow-x: auto;    
+	scroll-snap-type: x mandatory;
+}
+.attractions .container .cards .card {
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	height: 10%;
+	width: calc(25% - 1rem);
+	min-width: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 2% 0 2%;
+}
+.attractions .container .cards .card:hover {
+	box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+	transition: 0.5s;
+}
+
+.attractions .container .cards .card img {
+	width: 100%;
+	height: 25vh;
+	/* object-fit: cover; */
+	transition: transform 0.3s ease;
+}
+.attractions .container .cards .card img:hover {
+	transform: scale(1.1);
+}
+
+.attractions .container .cards .card-content {
+	padding: 1rem;
+}
+
+.attractions .container .cards .card-content h3 {
+	font-size: 1.2rem;
+	margin: 0.5rem 0;
+}
+
+.attractions .container .cards .card-content .reviews {
+	color: #555;
+	font-size: 0.9rem;
+}
+
+.attractions .container .cards::-webkit-scrollbar {
+    height: 10px;
+    background: transparent;
+}
+
+.attractions .container .cards::-webkit-scrollbar-thumb {
+    background: green;
+    border-radius: 5px;
+    border: 3px solid #e8ebe8; /* Matches the container background to create space */
+}
+
