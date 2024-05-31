@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Title styles */
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+.title h1 {
+    font-size: 3rem;
+    color: green;
+}
+
+.title h3 {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    color: green;
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s ease 0s;
+    overflow: hidden;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: green;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container styles */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    transition: 0.5s;
+    transform: translateY(50px);
+    z-index: 1;
+}
+
+.container-active {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.container::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: black;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+/* Content styles */
+.content {
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 6px;
+}
+.right .content h1 {
+	color: white;
+	position: absolute;
+	right: 120%;
+	top: 35%;
+	font-size: 3rem;
+	white-space: nowrap;
+}
+.left .content h1 {
+	color: white;
+	position: absolute;
+	left: 120%;
+	top: 35%;
+	font-size: 3rem;
+	white-space: nowrap;
+}
+
+.container .content img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.container .content h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.container .content p {
+    line-height: 1.5rem;
+    padding-top: 1rem;
+    color: white;
+}
+
+/* Bubble styles */
+.container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 30px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid green;
+    border-radius: 50%;
+}
+
+.right::after {
+    left: -16px;
+}
+
