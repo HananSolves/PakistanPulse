@@ -318,6 +318,7 @@ header nav ul li:hover::before {
 	height: 90%; 
 	border-radius: 1rem;
 	margin: 0 1rem 0 1rem;
+	overflow: hidden;
 }
 
 .slider .slide-track .slide:hover {
