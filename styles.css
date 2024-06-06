@@ -271,16 +271,73 @@ header nav ul li:hover::before {
 }
 
 
+/* Food Section */
+.slider {
+	height: 100vh;
+	overflow: hidden;
+}
+.slider .food-title {
+	font-family: "Great Vibes", cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 5rem;
+	/* padding-top: 2rem; */
+	padding-bottom: 2rem;
+	/* height: 20vh; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-20vw * 7.76));
+	}
+}
 
+.slider .slide-track {
+	background: #e8ebe8;
+	height: 80vh;
+	width: 100%;
+	padding: 2rem 4rem 2rem 4rem;
+	display: flex;
+	animation: scroll 40s linear infinite;
+	width: calc(20vw * 16);
+}
 
+.slider .slide-track:hover {
+	animation-play-state: paused;
+}
 
+.slider .slide-track .slide {
+	background: white;
+	width: 20vw;
+	height: 90%; 
+	border-radius: 1rem;
+	margin: 0 1rem 0 1rem;
+}
 
+.slider .slide-track .slide:hover {
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	transform: scale(1.05);
+}
 
+.slider .slide-track .slide h2 {
+	margin: 1rem;
+}
+.slider .slide-track .slide p {
+	margin: 1rem;
+}
 
-
-
-
+.slider .slide-track .slide img {
+	width: 100%;
+	height: 30vh;
+	object-fit: cover;
+	border-radius: 1rem 1rem 0 0;
+}
 
 
 
